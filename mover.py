@@ -8,9 +8,6 @@ def mover_arquivos(caminho_origem, caminho_destino, formato):
     for c in lista:
         nome_arquivo.append(pathlib.PureWindowsPath(str(lista[aux])).name)
         aux+=1
-
-    print(nome_arquivo)
-    print(lista)
     aux = 0
     for arquivo in lista: 
         os.rename(f"{arquivo}", f"{caminho_destino}\\{nome_arquivo[aux]}")
